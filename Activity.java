@@ -1,9 +1,13 @@
+//package Lab3;
+
 public class Activity {
+	
+	//this is my activity class
 
 	private String type;
 	private int taskNumber;
 	
-	
+	//these are the inputs, which i store them here
 	private int resourceType;
 	private int numberOfCycles;
 	
@@ -19,6 +23,8 @@ public class Activity {
 		
 		this.type = type;
 		
+		
+		//here i set the corresponding values to the corresponding type
 		if(type.equals("initiate")) {
 			
 			taskNumber = firstNum;
@@ -60,6 +66,8 @@ public class Activity {
 		}
 	
 	}
+	
+	//setters and getters
 	
 	public String getType() {
 		
