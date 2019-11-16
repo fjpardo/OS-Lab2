@@ -1,8 +1,15 @@
+//package Lab3;
+
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 
 public class Task {
+	
+	//This is my task class
 
+	
+	//a list of the activities that correspond to this specific task
 	private ArrayList<Activity> activities;
 	private int taskNumber;
 	private int timeTaken;
@@ -10,8 +17,14 @@ public class Task {
 	private String currentState;
 	
 	int holding = 0;
-	int initialClaim;
+	int initialClaim = 0;
 	
+	//these are sets of the initial claims and current holdings of each resource
+	HashMap<Integer,Integer> initialClaim2 = new HashMap<Integer,Integer>();
+	HashMap<Integer,Integer> holding2 = new HashMap<Integer,Integer>();
+	
+	
+	//this is the index of the input activities
 	int activityIndex;
 	
 	
@@ -106,6 +119,7 @@ public class Task {
 		return 0;
 	}
 	
+	//sorting them by task number
 	public static Comparator<Task> taskNum = new Comparator<Task>() {
 
 		public int compare(Task p1, Task p2) {
@@ -123,3 +137,4 @@ public class Task {
     };
 	
 }
+
