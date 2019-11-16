@@ -1,4 +1,8 @@
+//package Lab3;
+
 public class Resource {
+	
+	//this is my resource class, I made each resource its own object
 
 	private int type;
 	private int unitsPresent;
@@ -19,12 +23,14 @@ public class Resource {
 		
 	}
 	
+	//get the units available
 	public int getUnitsPresent() {
 		
 		return unitsPresent;
 		
 	}
 	
+	//when one releases resources, i first temp remove and then at the end of the cycle, i fully add them to make them available
 	public void tempAdd(int u) {
 		
 		tempAdd = u;
@@ -37,6 +43,7 @@ public class Resource {
 		
 	}
 	
+	//here i fully make the resources available after each cycle
 	public void fullyAdd() {
 		
 		unitsPresent = unitsPresent + tempAdd;
